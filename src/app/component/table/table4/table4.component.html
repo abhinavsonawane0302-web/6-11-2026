@@ -1,0 +1,38 @@
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-12">
+
+
+            <h2 class="text-center bg-info text-white p-2">
+                Course Details
+            </h2>
+
+            <table class="table table-bordered table-striped table-hover text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Course ID</th>
+                        <th>Course Name</th>
+                        <th>Duration</th>
+                        <th>Fees</th>
+                        <th>Mode</th>
+                        <th>Active</th>
+                        <th>Trainer</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let course of courseArr">
+                        <td>{{course.courseId}}</td>
+                        <td>{{course.courseName}}</td>
+                        <td>{{course.duration}}</td>
+                        <td>{{course.fees | currency : "INR"}}</td>
+                        <td>{{course.mode}}</td>
+                        <td>{{course.isActive ? "Actived" : "Deactived" }}</td>
+                        <td>{{course.trainer}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

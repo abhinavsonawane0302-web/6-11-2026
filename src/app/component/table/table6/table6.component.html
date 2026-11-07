@@ -1,0 +1,39 @@
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-12">
+
+            <h2 class="text-center bg-info text-white p-2">
+                Customer Details
+            </h2>
+
+            <table class="table table-bordered table-striped table-hover text-center">
+
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>Name</th>
+                        <th>City</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                        <th>Prime Member</th>
+                        <th>Contact</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let cust of customerArr">
+                        <td>{{cust.custId}}</td>
+                        <td>{{cust.name}}</td>
+                        <td>{{cust.city}}</td>
+                        <td>{{cust.age}}</td>
+                        <td>{{cust.email}}</td>
+                        <td>{{cust.isPrime ? "Yes" : "No"}}</td>
+                        <td>{{cust.contact}}</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+</div>

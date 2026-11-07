@@ -1,0 +1,26 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="text-center mt-3 py-1 bg-info">Education Cards</h2>
+        </div>
+
+        <div class="col-md-4 my-2" *ngFor="let education of educationArr">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h3>{{education.subjectName}}</h3>
+                </div>
+                <div class="card-body">
+                    <p>{{education.overview}}</p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <button mat-mini-fab color="primary" aria-label="Example icon button with a edit icon">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-mini-fab color="warn" aria-label="Example icon button with a delete icon">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

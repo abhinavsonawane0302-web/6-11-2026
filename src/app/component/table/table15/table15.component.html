@@ -1,0 +1,39 @@
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-12">
+
+            <h2 class="text-center bg-danger text-white p-2">
+                Flight Details
+            </h2>
+
+            <table class="table table-bordered table-striped table-hover text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Flight ID</th>
+                        <th>Airline</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Price</th>
+                        <th>Duration</th>
+                        <th>Direct Flight</th>
+                        <th>Seats</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let flight of flightArr">
+                        <td>{{flight.flightId}}</td>
+                        <td>{{flight.airline}}</td>
+                        <td>{{flight.from}}</td>
+                        <td>{{flight.to}}</td>
+                        <td>{{flight.price | currency : "INR" }}</td>
+                        <td>{{flight.duration}}</td>
+                        <td>{{flight.isDirect ? "Yes" : "No"}}</td>
+                        <td>{{flight.seats}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

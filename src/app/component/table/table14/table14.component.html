@@ -1,0 +1,37 @@
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-12">
+
+            <h2 class="text-center bg-info text-white p-2">
+                Bank Account Details
+            </h2>
+
+            <table class="table table-bordered table-striped table-hover text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Account No</th>
+                        <th>Holder Name</th>
+                        <th>Bank</th>
+                        <th>Account Type</th>
+                        <th>Balance</th>
+                        <th>Active</th>
+                        <th>Branch</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let acc of accountArr">
+                        <td>{{acc.accNo}}</td>
+                        <td>{{acc.holderName}}</td>
+                        <td>{{acc.bank}}</td>
+                        <td>{{acc.accType}}</td>
+                        <td>{{acc.balance | currency : "INR"}}</td>
+                        <td>{{acc.isActive ? "Yes" : "No"}}</td>
+                        <td>{{acc.branch}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

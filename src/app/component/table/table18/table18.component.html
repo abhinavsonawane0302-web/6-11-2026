@@ -1,0 +1,39 @@
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-12">
+
+            <h2 class="text-center bg-info text-white p-2">
+                Mobile Details
+            </h2>
+
+            <table class="table table-bordered table-striped table-hover text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Mobile ID</th>
+                        <th>Brand</th>
+                        <th>Model</th>
+                        <th>Price</th>
+                        <th>RAM (GB)</th>
+                        <th>Storage (GB)</th>
+                        <th>Available</th>
+                        <th>Operating System</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let mobile of mobileArr">
+                        <td>{{mobile.mobileId}}</td>
+                        <td>{{mobile.brand}}</td>
+                        <td>{{mobile.model}}</td>
+                        <td>{{mobile.price | currency : "INR"}}</td>
+                        <td>{{mobile.ram}}</td>
+                        <td>{{mobile.storage}}</td>
+                        <td>{{mobile.isAvailable ? "Yes" : "No"}}</td>
+                        <td>{{mobile.os}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

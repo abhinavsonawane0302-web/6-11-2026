@@ -1,0 +1,40 @@
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-12">
+
+
+            <h2 class="text-center bg-danger text-white p-2">
+                Hotel Details
+            </h2>
+
+            <table class="table table-bordered table-striped table-hover text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Hotel ID</th>
+                        <th>Name</th>
+                        <th>City</th>
+                        <th>Rating</th>
+                        <th>Price Per Night</th>
+                        <th>Available</th>
+                        <th>Rooms</th>
+                        <th>Contact</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let hotel of hotelArr">
+                        <td>{{hotel.hotelId}}</td>
+                        <td>{{hotel.name}}</td>
+                        <td>{{hotel.city}}</td>
+                        <td>{{hotel.rating}}</td>
+                        <td>{{hotel.pricePerNight | currency : "INR"}}</td>
+                        <td>{{hotel.isAvailable ? "Yes" : "No"}}</td>
+                        <td>{{hotel.rooms}}</td>
+                        <td>{{hotel.contact}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

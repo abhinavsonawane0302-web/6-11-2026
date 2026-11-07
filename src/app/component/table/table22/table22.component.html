@@ -1,0 +1,39 @@
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-12">
+
+            <h2 class="text-center bg-danger text-white p-2">
+                College Details
+            </h2>
+
+            <table class="table table-bordered table-striped table-hover text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>College ID</th>
+                        <th>Name</th>
+                        <th>City</th>
+                        <th>Type</th>
+                        <th>Established</th>
+                        <th>Fees</th>
+                        <th>Rating</th>
+                        <th>Autonomous</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let college of collegeArr">
+                        <td>{{college.collegeId}}</td>
+                        <td>{{college.name}}</td>
+                        <td>{{college.city}}</td>
+                        <td>{{college.type}}</td>
+                        <td>{{college.established}}</td>
+                        <td>{{college.fees | currency : "INR"}}</td>
+                        <td>{{college.rating}}</td>
+                        <td>{{college.isAutonomous ? "Yes" : " No"}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

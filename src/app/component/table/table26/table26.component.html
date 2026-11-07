@@ -1,0 +1,39 @@
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-12">
+
+            <h2 class="text-center bg-danger text-white p-2">
+                Home Appliance Details
+            </h2>
+
+            <table class="table table-bordered table-striped table-hover text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Appliance ID</th>
+                        <th>Name</th>
+                        <th>Brand</th>
+                        <th>Price</th>
+                        <th>Warranty</th>
+                        <th>Energy Rating</th>
+                        <th>Available</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let app of applianceArr">
+                        <td>{{app.appId}}</td>
+                        <td>{{app.name}}</td>
+                        <td>{{app.brand}}</td>
+                        <td>{{app.price | currency : "INR"}}</td>
+                        <td>{{app.warranty}}</td>
+                        <td>{{app.energyRating}}</td>
+                        <td>{{app.isAvailable ? "Yes" : "No" }}</td>
+                        <td>{{app.category}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

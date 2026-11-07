@@ -1,0 +1,39 @@
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-12">
+
+            <h2 class="text-center bg-info text-white p-2">
+                Car Details
+            </h2>
+
+            <table class="table table-bordered table-striped table-hover text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Car ID</th>
+                        <th>Brand</th>
+                        <th>Model</th>
+                        <th>Year</th>
+                        <th>Price</th>
+                        <th>Mileage</th>
+                        <th>Fuel</th>
+                        <th>Available</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let car of carArr">
+                        <td>{{car.carId}}</td>
+                        <td>{{car.brand}}</td>
+                        <td>{{car.model}}</td>
+                        <td>{{car.year}}</td>
+                        <td>{{car.price | currency : "INR"}}</td>
+                        <td>{{car.mileage}}</td>
+                        <td>{{car.fuel}}</td>
+                        <td>{{car.isAvailable ? "Yes" :  "No"}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

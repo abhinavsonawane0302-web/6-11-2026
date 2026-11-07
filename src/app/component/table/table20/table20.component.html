@@ -1,0 +1,39 @@
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-12">
+
+            <h2 class="text-center bg-info text-white p-2">
+                Gym Member Details
+            </h2>
+
+            <table class="table table-bordered table-striped table-hover text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Gym ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Plan</th>
+                        <th>Fees</th>
+                        <th>Trainer</th>
+                        <th>Active</th>
+                        <th>Weight</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let gym of gymArr">
+                        <td>{{gym.gymId}}</td>
+                        <td>{{gym.name}}</td>
+                        <td>{{gym.age}}</td>
+                        <td>{{gym.plan}}</td>
+                        <td>{{gym.fees | currency : "INR"}}</td>
+                        <td>{{gym.trainer}}</td>
+                        <td>{{gym.isActive ? "Yes" : "No"}}</td>
+                        <td>{{gym.weight}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

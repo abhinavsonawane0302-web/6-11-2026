@@ -1,0 +1,39 @@
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-12">
+
+            <h2 class="text-center bg-danger text-white p-2">
+                Hospital Details
+            </h2>
+
+            <table class="table table-bordered table-striped table-hover text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Hospital ID</th>
+                        <th>Name</th>
+                        <th>City</th>
+                        <th>Beds</th>
+                        <th>Type</th>
+                        <th>Rating</th>
+                        <th>Has Emergency</th>
+                        <th>Established</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let hospital of hospitalArr">
+                        <td>{{hospital.hospitalId}}</td>
+                        <td>{{hospital.name}}</td>
+                        <td>{{hospital.city}}</td>
+                        <td>{{hospital.beds}}</td>
+                        <td>{{hospital.type}}</td>
+                        <td>{{hospital.rating}}</td>
+                        <td>{{hospital.hasEmergency ? "Yes" : "No"}}</td>
+                        <td>{{hospital.established}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

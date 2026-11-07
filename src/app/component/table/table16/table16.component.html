@@ -1,0 +1,39 @@
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-12">
+
+            <h2 class="text-center bg-info text-white p-2">
+                Project Details
+            </h2>
+
+            <table class="table table-bordered table-striped table-hover text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Project ID</th>
+                        <th>Title</th>
+                        <th>Client</th>
+                        <th>Budget</th>
+                        <th>Status</th>
+                        <th>Team Size</th>
+                        <th>Critical</th>
+                        <th>Deadline</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let project of projectArr">
+                        <td>{{project.projectId}}</td>
+                        <td>{{project.title}}</td>
+                        <td>{{project.client}}</td>
+                        <td>{{project.budget | currency : "INR"}}</td>
+                        <td>{{project.status}}</td>
+                        <td>{{project.teamSize}}</td>
+                        <td>{{project.isCritical ? "Yes" : "No"}}</td>
+                        <td>{{project.deadline}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

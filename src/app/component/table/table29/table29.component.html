@@ -1,0 +1,39 @@
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-12">
+
+            <h2 class="text-center bg-info text-white p-2">
+                Grocery Item Details
+            </h2>
+
+            <table class="table table-bordered table-striped table-hover text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Item ID</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Unit</th>
+                        <th>Stock</th>
+                        <th>Is Organic</th>
+                        <th>Brand</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let item of groceryArr">
+                        <td>{{item.itemId}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.category}}</td>
+                        <td>{{item.price | currency : "INR"}}</td>
+                        <td>{{item.unit}}</td>
+                        <td>{{item.stock}}</td>
+                        <td>{{item.isOrganic ? "Yes" : "No"}}</td>
+                        <td>{{item.brand}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

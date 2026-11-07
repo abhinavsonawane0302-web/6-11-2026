@@ -1,0 +1,40 @@
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-12">
+
+
+            <h2 class="text-center bg-info text-white p-2">
+                Movie Details
+            </h2>
+
+            <table class="table table-bordered table-striped table-hover text-center">
+
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Movie ID</th>
+                        <th>Title</th>
+                        <th>Genre</th>
+                        <th>Rating</th>
+                        <th>Release Year</th>
+                        <th>Hit Movie</th>
+                        <th>Language</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let movie of movieArr">
+                        <td>{{movie.movieId}}</td>
+                        <td>{{movie.title}}</td>
+                        <td>{{movie.genre}}</td>
+                        <td>{{movie.rating}}</td>
+                        <td>{{movie.releaseYear}}</td>
+                        <td>{{movie.isHit ? "Yes" : "No"}}</td>
+                        <td>{{movie.language}}</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+</div>

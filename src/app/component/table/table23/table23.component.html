@@ -1,0 +1,39 @@
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-12">
+
+            <h2 class="text-center bg-info text-white p-2">
+                Cricket Player Details
+            </h2>
+
+            <table class="table table-bordered table-striped table-hover text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Player ID</th>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Team</th>
+                        <th>Matches</th>
+                        <th>Runs</th>
+                        <th>Active</th>
+                        <th>Jersey No</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let player of cricketerArr">
+                        <td>{{player.playerId}}</td>
+                        <td>{{player.name}}</td>
+                        <td>{{player.role}}</td>
+                        <td>{{player.team}}</td>
+                        <td>{{player.matches}}</td>
+                        <td>{{player.runs}}</td>
+                        <td>{{player.isActive ? "Yes" : "No"}}</td>
+                        <td>{{player.jerseyNo}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

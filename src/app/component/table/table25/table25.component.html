@@ -1,0 +1,39 @@
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-12">
+
+            <h2 class="text-center bg-info text-white p-2">
+                Laptop Details
+            </h2>
+
+            <table class="table table-bordered table-striped table-hover text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Laptop ID</th>
+                        <th>Brand</th>
+                        <th>Model</th>
+                        <th>Price</th>
+                        <th>RAM (GB)</th>
+                        <th>Processor</th>
+                        <th>Available</th>
+                        <th>Warranty (Years)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let laptop of laptopArr">
+                        <td>{{laptop.laptopId}}</td>
+                        <td>{{laptop.brand}}</td>
+                        <td>{{laptop.model}}</td>
+                        <td>{{laptop.price | currency : "INR"}}</td>
+                        <td>{{laptop.ram}}</td>
+                        <td>{{laptop.processor}}</td>
+                        <td>{{laptop.isAvailable ? "Yes" : "No"}}</td>
+                        <td>{{laptop.warranty}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

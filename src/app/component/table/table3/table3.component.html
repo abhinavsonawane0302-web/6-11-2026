@@ -1,0 +1,37 @@
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-12">
+
+            <h2 class="text-center bg-danger text-white p-2">
+                Product Details
+            </h2>
+
+            <table class="table table-bordered table-striped table-hover text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Product Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                        <th>Available</th>
+                        <th>Brand</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let pro of productArr">
+                        <td>{{pro.prodId}}</td>
+                        <td>{{pro.prodName}}</td>
+                        <td>{{pro.category}}</td>
+                        <td>{{pro.price | currency : "INR"}}</td>
+                        <td>{{pro.stock}}</td>
+                        <td>{{pro.isAvailable ? "Yes" : "No"}}</td>
+                        <td>{{pro.brand}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
